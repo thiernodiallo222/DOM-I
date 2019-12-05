@@ -67,13 +67,11 @@ let ctaImage = document.getElementById('cta-img');
 ctaImage.src = siteContent["cta"]["img-src"];
 
 
-let mainContent = document.querySelector('.main-content');
+// let mainContent = document.querySelector('.main-content');
 
+// let topContent = document.querySelector('.top-content');
 
-
-let topContent = document.querySelector('.top-content');
-
-let textContent = document.querySelector('.text-content');
+// let textContent = document.querySelector('.text-content');
 
 let middleImage = document.getElementById('middle-img');
 
@@ -82,12 +80,47 @@ middleImage.src = siteContent["main-content"]["middle-img-src"];
 
 let bottomContent = document.querySelector('.bottom-content');
 
-let contact = document.querySelector('.contact'); // class name selection 
+
+let contactH4 = document.querySelector('.contact > :nth-child(1)'); 
+contactH4.innerHTML = siteContent["contact"]["contact-h4"];
+
+let contactAddress = document.querySelector('.contact > :nth-child(2)');
+contactAddress.textContent = siteContent["contact"]["address"];
+
+  
+let contactPhone = document.querySelector('.contact > :nth-child(3)');
+contactPhone.innerHTML = siteContent["contact"]["phone"];
+
+let contactEmail = document.querySelector('.contact > :last-child');
+contactEmail.innerHTML = siteContent["contact"]["email"];
+
 
 let footer = document.querySelector('footer'); // tag name selection 
+footer.textContent = siteContent["footer"]["copyright"];
 
-// Question 2
 
-for (let element in siteContent.nav) {
-  navigation.innerHTML = element;
-}
+let mainContentFeatH4 = document.querySelector('.main-content .top-content >:first-child >:first-child');
+mainContentFeatH4.innerHTML = siteContent["main-content"]["features-h4"];
+
+let mainContentFeatCont = document.querySelector('.main-content .top-content >:first-child >:last-child');
+mainContentFeatCont.innerHTML = siteContent["main-content"]["features-content"];
+
+let aboutH4 = document.querySelector('.main-content .top-content >:last-child >:first-child');
+aboutH4.innerHTML = siteContent["main-content"]["about-h4"];
+
+let aboutContent = document.querySelector('.main-content .top-content >:last-child >:last-child');
+aboutContent.innerHTML = siteContent["main-content"]["about-content"];
+
+// main-content": {
+//     "features-h4":"Features",
+//     "features-content": "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+//     "about-h4":"About",
+//     "about-content": "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+//     "middle-img-src": "img/mid-page-accent.jpg",
+//     "services-h4":"Services",
+//     "services-content": "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+//     "product-h4":"Product",
+//     "product-content": "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+//     "vision-h4":"Vision",
+//     "vision-content": "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+//   },
