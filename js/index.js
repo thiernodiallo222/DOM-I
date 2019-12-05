@@ -40,3 +40,54 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+// Question 1
+// let head = document.getElementsByTagName('head');
+
+// let body = document.getElementsByTagName('body');
+
+let  conatainer = document.getElementsByClassName('.container');
+
+
+let navigation = document.querySelector('.container header nav');
+
+let anchor = document.querySelectorAll('a');
+
+// let logo = document.querySelector('#logo-img');  // ID selection 
+
+// logo.src = siteContent[nav]["img-src"]; // updating  the src attribute of logo image
+
+let ctaH1 = document.querySelector('.cta .cta-text h1');
+
+ctaH1.innerHTML = siteContent["cta"]["h1"];
+
+let ctaButton = document.querySelector('.cta .cta-text button');
+ctaButton.textContent = siteContent["cta"]["button"];
+
+let ctaImage = document.getElementById('cta-img');
+ctaImage.src = siteContent["cta"]["img-src"];
+
+
+let mainContent = document.querySelector('.main-content');
+
+
+
+let topContent = document.querySelector('.top-content');
+
+let textContent = document.querySelector('.text-content');
+
+let middleImage = document.getElementById('middle-img');
+
+// middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+middleImage.src = siteContent["main-content"]["middle-img-src"];
+
+let bottomContent = document.querySelector('.bottom-content');
+
+let contact = document.querySelector('.contact'); // class name selection 
+
+let footer = document.querySelector('footer'); // tag name selection 
+
+// Question 2
+
+for (let element in siteContent.nav) {
+  navigation.innerHTML = element;
+}
