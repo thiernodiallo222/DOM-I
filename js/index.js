@@ -40,13 +40,9 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
-// Question 1
-// let head = document.getElementsByTagName('head');
 
-// let body = document.getElementsByTagName('body');
 
 let  conatainer = document.getElementsByClassName('.container');
-
 
 let navItemOne = document.querySelector('.container header nav >:nth-child(1)');
 navItemOne.textContent = siteContent["nav"]["nav-item-1"];
@@ -62,16 +58,8 @@ let navItemSix = document.querySelector('.container header nav >:nth-child(6)');
 navItemSix.textContent = siteContent["nav"]["nav-item-6"];
 
 
-
-
-
-
-
 let anchor = document.querySelectorAll('a');
 
-// let logo = document.querySelector('#logo-img');  // ID selection 
-
-// logo.src = siteContent[nav]["img-src"]; // updating  the src attribute of logo image
 
 let ctaH1 = document.querySelector('.cta .cta-text h1');
 
@@ -84,11 +72,7 @@ let ctaImage = document.getElementById('cta-img');
 ctaImage.src = siteContent["cta"]["img-src"];
 
 
-// let mainContent = document.querySelector('.main-content');
 
-// let topContent = document.querySelector('.top-content');
-
-// let textContent = document.querySelector('.text-content');
 
 let middleImage = document.getElementById('middle-img');
 
@@ -118,10 +102,11 @@ footer.textContent = siteContent["footer"]["copyright"];
 
 let mainContentFeatH4 = document.querySelector('.main-content .top-content >:first-child >:first-child');
 mainContentFeatH4.innerHTML = siteContent["main-content"]["features-h4"];
+// mainContentFeatH4.style.color = "green";
 
 let mainContentFeatCont = document.querySelector('.main-content .top-content >:first-child >:last-child');
 mainContentFeatCont.innerHTML = siteContent["main-content"]["features-content"];
-
+// mainContentFeatCont.style.color = "green";
 let aboutH4 = document.querySelector('.main-content .top-content >:last-child >:first-child');
 aboutH4.innerHTML = siteContent["main-content"]["about-h4"];
 
@@ -150,18 +135,24 @@ let botConVisionContent = document.querySelector('.container .bottom-content >:n
 botConVisionContent.textContent = siteContent["main-content"]["vision-content"];
 
 
-// main-content": {
-//     "features-h4":"Features",
-//     "features-content": "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-//     "about-h4":"About",
-//     "about-content": "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-//     "middle-img-src": "img/mid-page-accent.jpg",
+
+let navigation = document.querySelectorAll('.container header nav a');
+
+navigation.forEach(a => {
+  a.style.color = "green";
+});
+
+let navig = document.querySelector(".container header nav");
+
+let portfolio = document.createElement("a");
+portfolio.innerHTML = "Portfolio";
+document.navig.appendChild(portfolio);
+
+let projects = document.createElement('a');
+projects.textContent = "Projects";
+document.navig.prependChild(projects);
 
 
-//     "services-h4":"Services",
-//     "services-content": "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-//     "product-h4":"Product",
-//     "product-content": "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-//     "vision-h4":"Vision",
-//     "vision-content": "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-//   },
+// var para = document.createElement("P");               // Create a <p> element
+// para.innerText = "This is a paragraph";               // Insert text
+// document.body.appendChild(para);                      // Append <p> to <body>
